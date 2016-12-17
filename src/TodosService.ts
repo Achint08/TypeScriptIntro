@@ -1,17 +1,21 @@
-var TodosService = (function () {
-    function TodosService() {
-        this.todos = [
-            { id: TodosService.__id++, name: 'Clean Cave', completed: false },
-            { id: TodosService.__id++, name: 'DryClean cape', completed: true },
-            { id: TodosService.__id++, name: 'Save Gotham', completed: false },
+ class TodosService {
+
+static __id = 0;
+todos : any[];
+
+constructor(){
+
+this.todos= [
+    {id : TodosService.__id++, name : 'Clean Cave' , completed :false } ,
+    {id : TodosService.__id++, name : 'DryClean cape' , completed :true } ,
+    {id : TodosService.__id++, name : 'Save Gotham' , completed :false } ,
         ];
     }
-    return TodosService;
-}());
-TodosService.__id = 0;
+}
+
 /*var TodosService = (function () {
 
-    // Constructor takes an array of Todo
+    // Constructor takes an array of Todo 
     // or string objects (or both)
     function TodosService(todos) {
 
@@ -35,7 +39,7 @@ TodosService.__id = 0;
     // Method that accepts either a string or a Todo object
     TodosService.prototype.addTodo = function (todo) {
         
-        if(!todo)
+        if(!todo) 
             return;
         
         var newTodo;
@@ -97,7 +101,7 @@ TodosService.__id = 0;
 
 
     // "Private" method not available anywhere else but in this scope
-    // Same type goes in and comes out,
+    // Same type goes in and comes out, 
     // but TypeScript won't be able to infer that
     function clone(obj) {
         return JSON.parse(JSON.stringify(obj));
@@ -105,4 +109,4 @@ TodosService.__id = 0;
 
     return TodosService;
 })();
-*/ 
+*/
